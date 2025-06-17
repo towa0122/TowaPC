@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>私について</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">
+        <a href="/">
+          <img
+            src="https://pbs.twimg.com/profile_images/1921742463288365056/BuqBizII_400x400.jpg"
+            alt="アイコン"
+          />
+          <span class="title-text">あるてぃめっとねこさんのさいと</span>
+        </a>
+      </h1>
+
+      <!-- ハンバーガーボタン -->
+      <button
+        class="hamburger"
+        aria-label="メニュー切替"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="nav-menu" class="nav-menu">
+        <a href="/">🏠ホーム</a>
+        <a href="about">ℹ️about</a>
+        <a href="nekosanbot">🤖NekosanBot</a>
+        <a href="link">🔗リンク集</a>
+        <a href="https://note.com/ultimatenekosan">📰ブログ</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-image">
+        <img
+          src="https://pbs.twimg.com/profile_banners/1921735267179966464/1747014328/1500x500"
+          alt="アイコン"
+          style="width: 100%; height: auto; display: block"
+        />
+      </div>
+      <h1 class="hero-title">私について</h1>
+    </div>
+
+    <div class="container">
+      <h2>
+        <img
+          src="https://pbs.twimg.com/profile_images/1921742463288365056/BuqBizII_400x400.jpg"
+          alt="アイコン"
+          style="max-width: 2.5%; height: auto"
+        />
+        ｜自己紹介
+      </h2>
+      <p style="margin-bottom: 1rem"></p>
+      <!-- 空白の代わりに余白をCSSで調整 -->
+      <p>
+        <img
+          src="https://pbs.twimg.com/profile_images/1921742463288365056/BuqBizII_400x400.jpg"
+          alt="アイコン"
+          style="max-width: 10%; height: auto"
+        />
+      </p>
+      <p>名前　｜あるてぃめっとねこさん</p>
+      <p>誕生日｜2010年1月22日</p>
+      <p>性別　｜男</p>
+      <p>
+        動画投稿者になりたいなといろいろ始めたもののまったく動画を投稿していないどころか編集すらしていない人
+      </p>
+      <p>
+        名前の由来は「_NECOisGOD_」から「ゆっくりねこさん」→「あるてぃめっとねこさん」に
+      </p>
+      <p>なんの捻りもないね()</p>
+
+      <h2>📚｜必読事項</h2>
+      <p style="margin-bottom: 1rem"></p>
+      <p>以下が許容可能な方はどうぞ</p>
+      <p style="margin-bottom: 1rem"></p>
+      <p>・東方Projectの2次・3次創作</p>
+      <p>・そる式、くまの巣式の立ち絵の使用</p>
+      <p>・上記立ち絵の改変キャラの使用</p>
+      <p>・ゴミみたいな低クオリティ</p>
+      <p style="margin-bottom: 1rem"></p>
+
+      <h2>𝕏｜Twitterについて</h2>
+      <p>
+        ・基本はフォロバしないことになりました。ガジェッターと絡む・絡みたい人をフォロー・フォロバします。
+      </p>
+      <p>・いいねをしたリプは読んでます。あと結構返します。</p>
+      <p>
+        ・基本的に会話したいならDiscordに来たほうがいいです。でもちゃんとしたDMなら返します。
+      </p>
+      <p>
+        ・以前はメールアドレスで連絡を受け付けていましたが、都合により今後はTwitterのDMかDiscordでお願いします。
+      </p>
+    </div>
+
+    <footer>
+      <a class="button" href="/"> 🏠ホームへ </a>
+
+      <a
+        class="button"
+        href="https://www.youtube.com/@ultimate-nekosan/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg"
+          alt="YouTube"
+          class="sns-icons"
+        />
+      </a>
+
+      <a
+        class="button"
+        href="https://twitter.com/ultimatenekosan"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="https://abs.twimg.com/icons/apple-touch-icon-192x192.png"
+          alt="Twitter"
+          class="sns-icons"
+        />
+      </a>
+      <p style="margin-bottom: 1rem"></p>
+      <p>&copy; 2024-2025 ultimatenekosan. All Rights Reserved.</p>
+      <button class="toggle-mode" onclick="toggleDarkMode()">🌙/☀️</button>
+    </footer>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+      }
+
+      // ページ読み込み時にデバイスの設定を反映
+      function applyDarkModeSetting() {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        if (prefersDark) {
+          document.body.classList.add("dark");
+        } else {
+          document.body.classList.remove("dark");
+        }
+      }
+
+      // ダークモード切り替えボタンの処理（ユーザーによる手動切り替え）
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+      }
+
+      // デバイス設定の変化も検知して自動で切り替え
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (e.matches) {
+            document.body.classList.add("dark");
+          } else {
+            document.body.classList.remove("dark");
+          }
+        });
+
+      // ページ読み込み時に一度実行
+      applyDarkModeSetting();
+      
+        const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("open");
+
+    // アクセシビリティ用のaria-expanded切り替え
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", !expanded);
+  });
+
+  // メニュー外クリックで閉じる（任意）
+  document.addEventListener("click", (e) => {
+    if (
+      !navMenu.contains(e.target) &&
+      !hamburger.contains(e.target) &&
+      navMenu.classList.contains("open")
+    ) {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+    }
+  });
+      
+    </script>
+  </body>
+</html>
