@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お知らせ｜glitchのサポート終了に関するお知らせ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">
+        <a href="/">
+          <img
+            src="https://pbs.twimg.com/profile_images/1921742463288365056/BuqBizII_400x400.jpg"
+            alt="アイコン"
+          />
+          <span class="title-text">あるてぃめっとねこさんのさいと</span>
+        </a>
+      </h1>
+
+      <!-- ハンバーガーボタン -->
+      <button
+        class="hamburger"
+        aria-label="メニュー切替"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="nav-menu" class="nav-menu">
+        <a href="/">🏠ホーム</a>
+        <a href="about">ℹ️about</a>
+        <a href="nekosanbot">🤖NekosanBot</a>
+        <a href="link">🔗リンク集</a>
+        <a href="https://note.com/ultimatenekosan">📰ブログ</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-image">
+        <img
+          src="https://pbs.twimg.com/profile_banners/1921735267179966464/1747014328/1500x500"
+          alt="アイコン"
+          style="width: 100%; height: auto; display: block"
+        />
+      </div>
+      <h1 class="hero-title">お知らせ</h1>
+    </div>
+
+    <div class="container">
+      <h2>Glitchのサポート終了に関するお知らせ</h2>
+            <p>2025年5月29日(木) 11:43</p>
+           <p style="margin-bottom: 2rem"></p> 
+      <p>先日、Glitchよりサポート終了のメールが届きました。</p>
+      <p>ねこさんぼっとはGlitchを利用して動作しているため、Glitchのサポート終了日の2025年7月8日をもって一度長期のオフライン状態となります。</p>
+      <p>今後新しい情報があればお知らせします。</p>
+      <p style="margin-bottom: 12rem"></p>
+    </div>
+
+    <footer>
+      <a class="button" href="/"> 🏠ホームへ </a>
+
+      <a
+        class="button"
+        href="https://www.youtube.com/@ultimate-nekosan/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg"
+          alt="YouTube"
+          class="sns-icons"
+        />
+      </a>
+
+      <a
+        class="button"
+        href="https://twitter.com/ultimatenekosan"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="https://abs.twimg.com/icons/apple-touch-icon-192x192.png"
+          alt="Twitter"
+          class="sns-icons"
+        />
+      </a>
+      <p style="margin-bottom: 1rem"></p>
+      <p>&copy; 2024-2025 ultimatenekosan. All Rights Reserved.</p>
+      <button class="toggle-mode" onclick="toggleDarkMode()">🌙/☀️</button>
+    </footer>
+
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+      }
+
+      // ページ読み込み時にデバイスの設定を反映
+      function applyDarkModeSetting() {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        if (prefersDark) {
+          document.body.classList.add("dark");
+        } else {
+          document.body.classList.remove("dark");
+        }
+      }
+
+      // ダークモード切り替えボタンの処理（ユーザーによる手動切り替え）
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+      }
+
+      // デバイス設定の変化も検知して自動で切り替え
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (e) => {
+          if (e.matches) {
+            document.body.classList.add("dark");
+          } else {
+            document.body.classList.remove("dark");
+          }
+        });
+
+      // ページ読み込み時に一度実行
+      applyDarkModeSetting();
+
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("open");
+
+        // アクセシビリティ用のaria-expanded切り替え
+        const expanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", !expanded);
+      });
+
+      // メニュー外クリックで閉じる（任意）
+      document.addEventListener("click", (e) => {
+        if (
+          !navMenu.contains(e.target) &&
+          !hamburger.contains(e.target) &&
+          navMenu.classList.contains("open")
+        ) {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+        }
+      });
+    </script>
+  </body>
+</html>
+
