@@ -673,28 +673,42 @@ body.dark .nav-menu a {
 }
 
 
-/* 2. ロゴ画像の共通設定 */
+/* 1. 親要素: サイズと位置の基準を定義 (肥大化対策) */
+.header-logo {
+    /* 📌 最も重要なサイズ制御。他の設定に負けないよう!importantを一時的に使用します。
+     * 本来のロゴサイズ 260x58 に合わせたサイズ。
+     */
+    width: 270px !important;  
+    height: 70px !important;  
+    position: relative; 
+    margin: 0; 
+}
+
+/* 2. SVGロゴ: 共通設定とサイズ（60%）の定義 */
 .header-logo .logo-svg {
     position: absolute; 
     top: 0;
     left: 0;
-    width: 60%; 
-    height: auto;
+    
+    /* 📌 親要素の 60% のサイズに縮小 */
+    width: 60% !important; 
+    height: auto !important;
 }
 
-/* 🔄 初期状態 (ライトモード) */
+/* 3. テーマ切り替えの定義 (表示・重なり対策) */
+/* 🔄 ライトモード (<body>に.darkクラスがない場合) */
 .header-logo .logo-light {
-    display: block; /* ライトSVGを表示 */
+    display: block !important; 
 }
 .header-logo .logo-dark {
-    display: none; /* 📌 ダークSVGを非表示に！ */
+    display: none !important; 
 }
 
-/* 🌙 ダークモードの切り替え設定 */
+/* 🌙 ダークモード (<body>に.darkクラスがある場合) */
 body.dark .header-logo .logo-light {
-    display: none; /* ライトSVGを非表示 */
+    display: none !important; 
 }
 
 body.dark .header-logo .logo-dark {
-    display: block; /* ダークSVGを表示 */
+    display: block !important; 
 }
