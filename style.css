@@ -674,10 +674,10 @@ body.dark .nav-menu a {
 
 /* 親要素（リンク）に基準となる位置を設定 */
 .header-logo {
-    display: block; /* リンクをブロック要素に */
+    display: block;
     width: 258.931px; /* SVGの元のサイズに合わせる（適切に調整してください） */
     height: 57.623px; /* SVGの元のサイズに合わせる（適切に調整してください） */
-    position: relative; /* 子要素を重ねるための基準 */
+    position: relative; 
 }
 
 /* ロゴ画像の共通設定 */
@@ -688,10 +688,10 @@ body.dark .nav-menu a {
     
     /* 📌 指定された「画像の60%」の大きさにする */
     width: 60%;
-    height: auto; /* 幅に合わせて高さを自動調整 */
+    height: auto; 
 }
 
-/* 🔄 初期状態：ライトテーマ時はライトSVGを表示、ダークSVGを非表示 */
+/* 🔄 初期状態（ライトモード）: ライトSVGを表示し、ダークSVGを非表示 */
 .header-logo .logo-light {
     display: block;
 }
@@ -699,11 +699,11 @@ body.dark .nav-menu a {
     display: none;
 }
 
-/* 🌙 ダークテーマが有効な場合（<body>に.dark-themeクラスが付与されている時） */
-body.dark-theme .header-logo .logo-light {
+/* 🌙 ダークモードが有効な場合（<body>に.darkクラスが付与されている時） */
+body.dark .header-logo .logo-light {
     display: none; /* ライトSVGを非表示 */
 }
 
-body.dark-theme .header-logo .logo-dark {
+body.dark .header-logo .logo-dark {
     display: block; /* ダークSVGを表示 */
 }
