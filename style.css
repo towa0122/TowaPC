@@ -283,7 +283,8 @@ body.dark .hero-title {
 /* Buttons */
 .button {
   display: inline-block;
-  background-color: #2e8fff; /* 水色 */
+  background-color: #2e8fff;
+  /* 水色 */
   color: #222222;
   font-weight: bold;
   text-decoration: none;
@@ -295,7 +296,8 @@ body.dark .hero-title {
 }
 
 .button:hover {
-  background-color: #1a5edb; /* 濃い水色 */
+  background-color: #1a5edb;
+  /* 濃い水色 */
   transform: scale(1.05);
 }
 
@@ -470,7 +472,8 @@ body.dark .tile-card p {
 
 .title {
   font-weight: 700;
-  font-size: 1.3rem; /* 少し大きめ */
+  font-size: 1.3rem;
+  /* 少し大きめ */
   margin-bottom: 0.3rem;
 }
 
@@ -493,7 +496,8 @@ body.dark .description {
 
 /* ハンバーガーメニューのボタン */
 .hamburger {
-  display: none; /* デフォルトは非表示 */
+  display: none;
+  /* デフォルトは非表示 */
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -559,6 +563,7 @@ body.dark .nav-menu a {
 
 /* スマホ対応 - 768px以下 */
 @media (max-width: 768px) {
+
   /* ハンバーガーボタン表示 */
   .hamburger {
     display: flex;
@@ -567,7 +572,8 @@ body.dark .nav-menu a {
   /* メニューは縦に並べて隠す */
   .nav-menu {
     position: fixed;
-    top: 72px; /* ヘッダー高さ+少し余白 */
+    top: 72px;
+    /* ヘッダー高さ+少し余白 */
     right: 20px;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -587,7 +593,8 @@ body.dark .nav-menu a {
 
   /* メニュー開いた時 */
   .nav-menu.open {
-    max-height: 500px; /* 必要な高さに合わせて調整可 */
+    max-height: 500px;
+    /* 必要な高さに合わせて調整可 */
     transition: max-height 0.4s ease;
   }
 
@@ -604,30 +611,36 @@ body.dark .nav-menu a {
   gap: 2rem;
   margin-top: 140px;
 }
+
 .article {
   background: #ffffff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .post-meta {
   font-size: 0.9rem;
   color: #666666;
   margin-bottom: 1rem;
 }
+
 .share-buttons {
   margin-bottom: 1rem;
 }
+
 .categories a {
   font-size: 0.9rem;
   color: #2679d5;
   margin-right: 0.5rem;
 }
+
 .related-posts .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
 }
+
 .author-box {
   display: flex;
   gap: 1rem;
@@ -636,20 +649,24 @@ body.dark .nav-menu a {
   border-radius: 8px;
   margin-top: 2rem;
 }
+
 .author-box img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
 }
+
 .comments-section {
   margin-top: 2rem;
 }
+
 .comment {
   background: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+
 .comment-form textarea {
   width: 100%;
   height: 100px;
@@ -658,6 +675,7 @@ body.dark .nav-menu a {
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
+
 .sidebar .widget {
   background: #ffffff;
   padding: 1rem;
@@ -665,6 +683,7 @@ body.dark .nav-menu a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin-bottom: 1.5rem;
 }
+
 .search-box input {
   width: 100%;
   padding: 0.5rem;
