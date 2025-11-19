@@ -673,48 +673,24 @@ body.dark .nav-menu a {
 }
 
 
-/* ======================================= */
-/* 1. 親要素: サイズと位置の基準を定義 */
-/* ======================================= */
-.header-logo {
-    display: block;
-    /* 📌 ロゴの元のサイズ（260x58）に合わせたサイズを定義。
-     * 「橋」のような背景が途切れないよう、ViewBoxより少し大きめに設定。
-     */
-    width: 270px;  
-    height: 70px;  
-    position: relative; 
-    /* 補足: position: relative; がないと子要素の absolute がウィンドウ基準になる */
-    margin-left: auto; /* 必要であれば中央寄せなどの位置調整 */
-    margin-right: auto;
-}
-
-/* ======================================= */
-/* 2. SVGロゴ: 重ね合わせとサイズ（60%）の定義 */
-/* ======================================= */
+/* 2. ロゴ画像の共通設定 */
 .header-logo .logo-svg {
     position: absolute; 
     top: 0;
     left: 0;
-    
-    /* 📌 親要素（.header-logo の 270px）に対する 60% のサイズに縮小 */
     width: 60%; 
     height: auto;
 }
-
-/* ======================================= */
-/* 3. テーマ切り替えの定義 */
-/* ======================================= */
 
 /* 🔄 初期状態 (ライトモード) */
 .header-logo .logo-light {
     display: block; /* ライトSVGを表示 */
 }
 .header-logo .logo-dark {
-    display: none; /* ダークSVGを非表示 */
+    display: none; /* 📌 ダークSVGを非表示に！ */
 }
 
-/* 🌙 ダークモードが有効な場合（<body>に.darkクラスが付与されている時） */
+/* 🌙 ダークモードの切り替え設定 */
 body.dark .header-logo .logo-light {
     display: none; /* ライトSVGを非表示 */
 }
