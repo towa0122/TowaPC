@@ -672,26 +672,18 @@ body.dark .nav-menu a {
   border-radius: 4px;
 }
 
-/* 親要素（リンク）に基準となる位置を設定 */
-.header-logo {
-    display: block;
-    width: 300px; /* SVGの元のサイズに合わせる（適切に調整してください） */
-    height: 100px; /* SVGの元のサイズに合わせる（適切に調整してください） */
-    position: relative; 
-}
-
 /* ロゴ画像の共通設定 */
-.header-logo img {
-    position: absolute; /* 親要素の左上に重ねて配置 */
+.header-logo .logo-svg {
+    position: absolute; 
     top: 0;
     left: 0;
     
     /* 📌 指定された「画像の60%」の大きさにする */
     width: 60%;
-    height: auto; 
+    height: auto;
 }
 
-/* 🔄 初期状態（ライトモード）: ライトSVGを表示し、ダークSVGを非表示 */
+/* 🔄 初期状態：ライトテーマ時はライトSVGを表示、ダークSVGを非表示 */
 .header-logo .logo-light {
     display: block;
 }
