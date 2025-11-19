@@ -675,8 +675,8 @@ body.dark .nav-menu a {
 /* 親要素（リンク）に基準となる位置を設定 */
 .header-logo {
     display: block;
-    width: 258.931px; /* SVGの元のサイズに合わせる（適切に調整してください） */
-    height: 57.623px; /* SVGの元のサイズに合わせる（適切に調整してください） */
+    width: 260px; /* SVGの元のサイズに合わせる（適切に調整してください） */
+    height: 60px; /* SVGの元のサイズに合わせる（適切に調整してください） */
     position: relative; 
 }
 
