@@ -671,3 +671,9 @@ body.dark .nav-menu a {
   border: 1px solid #dddddd;
   border-radius: 4px;
 }
+
+<a href="/" class="header-logo">
+  <img src="/ヘッダーライト.svg" alt="サイトロゴ (ライトテーマ)" class="logo-light">
+  
+  <img src="/ヘッダーダーク.svg" alt="サイトロゴ (ダークテーマ)" class="logo-dark">
+</a>
