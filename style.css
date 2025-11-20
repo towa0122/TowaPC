@@ -672,16 +672,11 @@ body.dark .nav-menu a {
   border-radius: 4px;
 }
 
-
-/* 1. 親要素: サイズと位置の基準を定義 (ここがヘッダー肥大化の原因) */
+/* 1. 親要素: サイズと位置の基準を定義 */
 .header-logo {
     display: block;
-    /* 📌 以下の width: 270px !important; と height: 70px !important; 
-     * を削除（またはコメントアウト）してください。
-     * この固定サイズがヘッダー全体を広げています。
-     */
-    /* width: 270px; */ 
-    /* height: 70px; */ 
+    /* 📌 以下の width は不要ですが、ロゴの高さに合わせて height を再設定 */
+    height: 70px; /* ロゴの表示に最低限必要な高さ（ロゴの表示サイズより少し大きく） */
     position: relative; 
     margin: 0; 
 }
@@ -691,12 +686,10 @@ body.dark .nav-menu a {
     position: absolute; 
     top: 0;
     left: 0;
-    
-    /* 📌 ここでロゴの表示サイズを強制的に制御 */
+    /* 📌 ここは前回正常に機能していたサイズ制御を維持 */
     width: 60% !important; 
     height: auto !important;
 }
-
 
 /* 3. テーマ切り替えの定義 (表示・重なり対策) */
 
