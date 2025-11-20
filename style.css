@@ -672,40 +672,25 @@ body.dark .nav-menu a {
   border-radius: 4px;
 }
 
-/* 1. 親要素: サイズと位置の基準を定義 */
+
+/* ロゴの親要素に最低限の高さを設定し、ロゴの表示を回復させます。 */
 .header-logo {
-    display: block;
-    /* 📌 以下の width は不要ですが、ロゴの高さに合わせて height を再設定 */
-    height: 70px; /* ロゴの表示に最低限必要な高さ（ロゴの表示サイズより少し大きく） */
+    height: 70px; /* 📌 ロゴが表示される高さを確保（ロゴ消滅対策） */
     position: relative; 
     margin: 0; 
 }
 
-/* 2. SVGロゴ: 共通設定とサイズ（60%）の定義 */
+/* SVGロゴのサイズを強制的に 60% に固定します。 */
 .header-logo .logo-svg {
     position: absolute; 
     top: 0;
     left: 0;
-    /* 📌 ここは前回正常に機能していたサイズ制御を維持 */
     width: 60% !important; 
     height: auto !important;
 }
 
-/* 3. テーマ切り替えの定義 (表示・重なり対策) */
-
-/* 🔄 ライトモード */
-.header-logo .logo-light {
-    display: block !important; 
-}
-.header-logo .logo-dark {
-    display: none !important; 
-}
-
-/* 🌙 ダークモード */
-body.dark .header-logo .logo-light {
-    display: none !important; 
-}
-
-body.dark .header-logo .logo-dark {
-    display: block !important; 
-}
+/* テーマの切り替えが不安定なため、!importantを維持します。 */
+.header-logo .logo-light { display: block !important; }
+.header-logo .logo-dark { display: none !important; }
+body.dark .header-logo .logo-light { display: none !important; }
+body.dark .header-logo .logo-dark { display: block !important; }
