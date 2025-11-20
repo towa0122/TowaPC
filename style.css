@@ -675,25 +675,18 @@ body.dark .nav-menu a {
 
 /* 1. 親要素: サイズと位置の基準を定義 (肥大化対策) */
 .header-logo {
-    /* 📌 最も重要なサイズ制御。他の設定に負けないよう!importantを一時的に使用します。
-     * 本来のロゴサイズ 260x58 に合わせたサイズ。
-     */
-    width: 270px !important;  
-    height: 70px !important;  
-    position: relative; 
-    margin: 0; 
+  width: 270px;
+  /* height は消す！ */
+  position: relative;
+  margin: 0;
 }
 
-/* 2. SVGロゴ: 共通設定とサイズ（60%）の定義 */
 .header-logo .logo-svg {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    
-    /* 📌 親要素の 60% のサイズに縮小 */
-    width: 60% !important; 
-    height: auto !important;
+  width: 60%;
+  height: auto;
+  display: block;
 }
+
 
 /* 3. テーマ切り替えの定義 (表示・重なり対策) */
 
