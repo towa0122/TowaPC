@@ -672,6 +672,12 @@ body.dark .nav-menu a {
   border-radius: 4px;
 }
 
+/* 404ページ内の特定のコンテンツを中央寄せにするための専用クラス */
+.not-found-content {
+  /* この中のインライン要素やテキストを中央に揃えます */
+  text-align: center; 
+}
+
 
 /* 1. 親要素: サイズと位置の基準を定義 */
 .header-logo {
