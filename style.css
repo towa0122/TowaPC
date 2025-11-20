@@ -673,36 +673,37 @@ body.dark .nav-menu a {
 }
 
 
-/* 1. 親要素: サイズと位置の基準を定義 (肥大化対策) */
+/* 1. 親要素: サイズと位置の基準を定義 */
 .header-logo {
   width: 270px;
-  /* height は消す！ */
   position: relative;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
+/* 2. SVG / IMG ロゴ共通のサイズ設定 */
 .header-logo .logo-svg {
   width: 60%;
   height: auto;
   display: block;
+  position: static; /* 念のため固定 */
 }
 
+/* 3. テーマ切り替え */
 
-/* 3. テーマ切り替えの定義 (表示・重なり対策) */
-
-/* 🔄 ライトモード (<body>に.darkクラスがない場合) */
+/* ライトモード */
 .header-logo .logo-light {
-    display: block !important; 
+  display: block !important;
 }
 .header-logo .logo-dark {
-    display: none !important; 
+  display: none !important;
 }
 
-/* 🌙 ダークモード (<body>に.darkクラスがある場合) */
+/* ダークモード */
 body.dark .header-logo .logo-light {
-    display: none !important; 
+  display: none !important;
 }
-
 body.dark .header-logo .logo-dark {
-    display: block !important; 
+  display: block !important;
 }
