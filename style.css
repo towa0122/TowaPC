@@ -673,33 +673,43 @@ body.dark .nav-menu a {
 }
 
 
-/* 1. ロゴの親要素: 高さを確保し、ヘッダーの肥大化を防ぐ */
+/* 1. 親要素: サイズと位置の基準を定義 (肥大化対策) */
 .header-logo {
-    /* 📌 ヘッダー肥大化対策のため、幅は指定しない */
-    height: 70px !important; /* ロゴ表示に必要な高さを強制確保（ロゴ消滅対策） */
-    position: relative !important; 
-    margin: 0 !important; 
+    /* 📌 最も重要なサイズ制御。他の設定に負けないよう!importantを一時的に使用します。
+     * 本来のロゴサイズ 260x58 に合わせたサイズ。
+     */
+    width: 270px !important;  
+    height: 70px !important;  
+    position: relative; 
+    margin: 0; 
 }
 
-/* 2. SVGロゴ: サイズと表示切り替えの強制 */
+/* 2. SVGロゴ: 共通設定とサイズ（60%）の定義 */
 .header-logo .logo-svg {
-    width: 60% !important; /* 適切なサイズに強制縮小 */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    
+    /* 📌 親要素の 60% のサイズに縮小 */
+    width: 60% !important; 
     height: auto !important;
-    position: absolute !important; 
-    top: 0 !important;
-    left: 0 !important;
 }
 
-/* 3. テーマ切り替えの強制表示/非表示 */
-.header-logo .logo-light { 
-    display: block !important; /* ライトモード時の表示強制 */
+/* 3. テーマ切り替えの定義 (表示・重なり対策) */
+
+/* 🔄 ライトモード (<body>に.darkクラスがない場合) */
+.header-logo .logo-light {
+    display: block !important; 
 }
-.header-logo .logo-dark { 
-    display: none !important; /* ライトモード時の非表示強制 */
+.header-logo .logo-dark {
+    display: none !important; 
 }
-body.dark .header-logo .logo-light { 
-    display: none !important; /* ダークモード時の非表示強制 */
+
+/* 🌙 ダークモード (<body>に.darkクラスがある場合) */
+body.dark .header-logo .logo-light {
+    display: none !important; 
 }
-body.dark .header-logo .logo-dark { 
-    display: block !important; /* ダークモード時の表示強制 */
+
+body.dark .header-logo .logo-dark {
+    display: block !important; 
 }
